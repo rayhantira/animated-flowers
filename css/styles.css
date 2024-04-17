@@ -3,8 +3,7 @@
 }
 
 html,
-body,
-.wrapper {
+body {
   height: 100%;
 }
 
@@ -26,43 +25,14 @@ body {
   animation: rotate 4s infinite alternate linear;
 }
 
-@media (width >= 500px) {
-  body {
-    padding: 0;
-  }
-}
-
 .card {
-  position: fixed;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  /* Removed fixed positioning */
   width: 90%;
+  margin: 0 auto;
   padding: 70px 30px 44px;
   border-radius: 1.25rem;
   background: #ffffff;
   text-align: center;
-}
-
-@media (width >= 500px) {
-  .card {
-    width: 70%;
-  }
-}
-
-@media (width >= 680px) {
-  .card {
-    top: 0;
-    right: 0;
-    left: auto;
-    translate: 0 0;
-    margin: 0;
-    height: 100%;
-    width: 50%;
-    border-radius: 0;
-    padding-top: 240px;
-  }
 }
 
 .card > img {
@@ -128,4 +98,18 @@ body {
   font-size: 1rem;
   text-align: left;
   text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 680px) {
+  .card {
+    width: 90%;
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 50px 20px; /* Adjusted for better visual */
+  }
 }
